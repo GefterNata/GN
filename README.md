@@ -25,3 +25,30 @@ Gefter Natã
     </div>
 </body>
 </html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #121212; /* Fundo escuro */
+        color: #fff; /* Cor do texto em branco */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<style>
+    .gallery img {
+        width: 280px;
+        height: auto;
+        border-radius: 20px; /* Moldura arredondada */
+        box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+</style>
