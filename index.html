@@ -44,6 +44,7 @@
             height: auto;
             border-radius: 20px;
             overflow: hidden;
+            /* Removendo a transformação da moldura */
         }
 
         .gallery img {
@@ -52,11 +53,11 @@
             display: block;
             border-radius: 20px;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out; /* Efeito de zoom apenas na imagem */
         }
 
         .gallery .image-container:hover img {
-            transform: scale(1.05);
+            transform: scale(1.05); /* Aplica o zoom apenas na imagem */
         }
 
         .logo {
