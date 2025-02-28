@@ -41,23 +41,23 @@
         .gallery .image-container {
             position: relative;
             width: 280px;
-            height: auto;
+            height: 180px; /* Definir altura fixa para formato horizontal */
             border-radius: 20px;
             overflow: hidden;
-            /* Removendo a transformação da moldura */
         }
 
         .gallery img {
             width: 100%;
-            height: auto;
+            height: 100%; /* Ajustar para preencher completamente a moldura */
+            object-fit: cover; /* Manter a proporção da imagem */
             display: block;
             border-radius: 20px;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out; /* Efeito de zoom apenas na imagem */
+            transition: transform 0.3s ease-in-out; /* Efeito de zoom */
         }
 
         .gallery .image-container:hover img {
-            transform: scale(1.05); /* Aplica o zoom apenas na imagem */
+            transform: scale(1.05); /* Aplica um zoom leve de 5% */
         }
 
         .logo {
