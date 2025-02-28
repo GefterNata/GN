@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gefter Natã</title>
     <style>
-        @font-face {
-            font-family: 'TheBoldFont';
-            src: url('THEBOLDFONT-FREEVERSION.ttf') format('truetype');
-            font-weight: normal;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@800&family=Playfair+Display&display=swap');
+        
         body {
             font-family: 'Playfair Display', serif;
             background-color: #1a1a1a;
@@ -22,6 +18,12 @@
         
         h1 {
             font-family: 'TheBoldFont', sans-serif;
+            font-weight: bold;
+            font-size: 36px;
+        }
+
+        .alt-font {
+            font-family: 'Lato', sans-serif;
             font-weight: bold;
         }
 
@@ -53,7 +55,7 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        .gallery img:hover {
+        .gallery .image-container:hover img {
             transform: scale(1.05);
         }
 
@@ -64,7 +66,7 @@
 
         .overlay {
             position: absolute;
-            top: -2px;
+            top: 0px;
             right: 10px;
             width: 50px;
             height: 50px;
@@ -85,11 +87,10 @@
             color: #888;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@800&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <img src="logo_branca.png" alt="Logo" class="logo">
-    <h1>Gefter Natã</h1>
+    <h1>Gefter Nat<span class="alt-font">ã</span></h1>
     <div class="gallery">
         <div class="image-container">
             <img src="001.jpg" alt="Projeto 1">
