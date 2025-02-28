@@ -60,6 +60,12 @@
             transform: scale(1.05); /* Aplica um zoom leve de 5% */
         }
 
+        /* Ajuste de foco para as duas primeiras imagens */
+        .gallery .image-container:nth-child(1) img,
+        .gallery .image-container:nth-child(2) img {
+            object-position: top; /* Ajusta o foco para a parte superior da imagem */
+        }
+
         .logo {
             max-width: 100px;
             margin-bottom: 20px;
