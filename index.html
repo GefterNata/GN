@@ -38,54 +38,25 @@
             margin-right: auto;
         }
 
-        .gallery .image-container {
+        .gallery .video-container {
             position: relative;
             width: 280px;
-            height: 180px; /* Definir altura fixa para formato horizontal */
+            height: 180px;
             border-radius: 20px;
             overflow: hidden;
         }
 
-        .gallery img {
+        .gallery iframe {
             width: 100%;
-            height: 100%; /* Ajustar para preencher completamente a moldura */
-            object-fit: cover; /* Manter a proporção da imagem */
-            display: block;
+            height: 100%;
+            border: 0;
             border-radius: 20px;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out; /* Efeito de zoom */
-        }
-
-        .gallery .image-container:hover img {
-            transform: scale(1.05); /* Aplica um zoom leve de 5% */
-        }
-
-        /* Ajuste de foco para as duas primeiras imagens */
-        .gallery .image-container:nth-child(1) img,
-        .gallery .image-container:nth-child(2) img {
-            object-position: 50% 40%; /* Ajusta o foco para 10% mais acima */
         }
 
         .logo {
             max-width: 100px;
             margin-bottom: 20px;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0px;
-            right: 10px;
-            width: 50px;
-            height: 50px;
-            background: url('logo_fundopreto.png') center/contain no-repeat;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-
-        .image-container:hover .overlay {
-            opacity: 0.8;
-            transform: translateY(0);
         }
 
         .footer {
@@ -99,21 +70,17 @@
     <img src="logo_branca.png" alt="Logo" class="logo">
     <h1>Gefter Nat<span class="alt-font">ã</span></h1>
     <div class="gallery">
-        <div class="image-container">
-            <img src="001.jpg" alt="Projeto 1">
-            <div class="overlay"></div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/xA4_tkq3f90&t=29s&ab" allowfullscreen></iframe>
         </div>
-        <div class="image-container">
-            <img src="002.jpg" alt="Projeto 2">
-            <div class="overlay"></div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/paixDxFjQ4k&ab" allowfullscreen></iframe>
         </div>
-        <div class="image-container">
-            <img src="003.jpg" alt="Projeto 3">
-            <div class="overlay"></div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/KkAst3GvwlU&ab" allowfullscreen></iframe>
         </div>
-        <div class="image-container">
-            <img src="004.jpg" alt="Projeto 4">
-            <div class="overlay"></div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Uj2BSMoXiOs&ab" allowfullscreen></iframe>
         </div>
     </div>
     <div class="footer">Site desenvolvido por Gefter Natã</div>
