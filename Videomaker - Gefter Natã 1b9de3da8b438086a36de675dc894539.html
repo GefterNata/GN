@@ -1,0 +1,730 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Videomaker - Gefter Natã</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1b9de3da-8b43-8086-a36d-e675dc894539" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1490810194309-344b3661ba39?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 36%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/002.jpg"/></div><h1 class="page-title">Videomaker - Gefter Natã</h1><p class="page-description"></p></header><div class="page-body"><div id="1b9de3da-8b43-81a6-b31c-eb9f25d21ae8" class="column-list"><div id="1b9de3da-8b43-8185-aab1-d6a111d11940" style="width:62.5%" class="column"><h2 id="1b9de3da-8b43-8149-921c-c6bb3231cdf8" class=""><mark class="highlight-brown">Crafting Visual Stories with Precision and Passion &amp; Passion</mark></h2><hr id="1b9de3da-8b43-814a-9654-eb2a09c40406"/><h3 id="1b9de3da-8b43-810a-adb7-d7c1889e4270" class="">Welcome to my portfolio! I’m [Your Name],</h3><h3 id="1b9de3da-8b43-81d3-9366-cac4b9eaf9c3" class="">Meu diferencial é a vontade de sempre aprender e melhorar no trabalho, com total dedicação encaro os desafios do dia a dia de forma positiva e estou sempre pronto para enfrentá-los. Além disso, destaco que tenho Jesus como o centro da minha vida.</h3><p id="1b9de3da-8b43-81cf-a598-d311a99d4c70" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b9de3da-8b43-819f-876e-ec5625c065ed"><div style="font-size:1.5em"><span class="icon">▶️</span></div><div style="width:100%"><mark class="highlight-brown"><strong><a href="https://www.notion.so/Videomaker-Gefter-Nat-1b9de3da8b438086a36de675dc894539?pvs=21">Explore My Work</a></strong></mark></div></figure><p id="1b9de3da-8b43-8159-ae13-f033c88cfa6d" class="">
+</p><hr id="1b9de3da-8b43-8150-9a61-d52f496f3e3c"/><p id="1b9de3da-8b43-8167-a01d-f0bca7799fee" class="">
+</p></div><div id="1b9de3da-8b43-813a-aa0a-e9812204ee0a" style="width:37.5%" class="column"><p id="1b9de3da-8b43-81f3-a47b-db50a78a9765" class="">
+</p><figure id="1b9de3da-8b43-81fb-bf58-c782b8d74889" class="image"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Firefly_A_hyper_realistic_scene_of_video_editors_setup_modern_neon_lights_80467.jpg"><img style="width:336px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Firefly_A_hyper_realistic_scene_of_video_editors_setup_modern_neon_lights_80467.jpg"/></a></figure><p id="1b9de3da-8b43-8131-acdf-d0d74774541a" class="">
+</p></div></div><div id="1b9de3da-8b43-81d6-8438-c8d41346a7be" class="column-list"><div id="1b9de3da-8b43-812e-b1b9-ffe4f802d567" style="width:75%" class="column"><h2 id="1b9de3da-8b43-814a-9fa0-f757e840add4" class=""><mark class="highlight-brown">About Me</mark></h2><h3 id="1b9de3da-8b43-810f-98c4-c244d779bc38" class="">Personal Story:</h3><p id="1b9de3da-8b43-8138-b7ee-f985e681a7c8" class="">From a young age, I was fascinated by the power of visual storytelling. This passion led me to pursue a career in video editing.</p><p id="1b9de3da-8b43-8164-8d3f-f94dfbbdb40e" class="">Where I’ve honed my skills over [X] years. With a background in [mention any relevant education or experience],.</p><p id="1b9de3da-8b43-8112-a328-e1aaf2ee23fb" class="">I’ve had the privilege of working on diverse projects that range from YouTube Videos to corporate videos.</p><h3 id="1b9de3da-8b43-81c3-bcdf-e65239fa40bd" class="">Skills and Expertise:</h3><ul id="1b9de3da-8b43-810d-b0e9-db9614dad96e" class="bulleted-list"><li style="list-style-type:disc"><strong>Editing Software:</strong> Adobe Premiere Pro, After Effects, Final Cut Pro</li></ul><ul id="1b9de3da-8b43-8146-ae11-d078f44c89b6" class="bulleted-list"><li style="list-style-type:disc"><strong>Specializations:</strong> Narrative-driven editing, color grading, motion graphics, sound design</li></ul><h3 id="1b9de3da-8b43-81b9-b27f-efd73516e78d" class=""><strong>Unique Selling Proposition (USP):</strong></h3><p id="1b9de3da-8b43-8170-999a-f12235b9003b" class="">What sets me apart is my ability to blend creativity with technical precision, ensuring each video not only meets but exceeds client expectations.</p></div><div id="1b9de3da-8b43-81b4-8aa7-dea77cf6d7ae" style="width:12.5%" class="column"><p id="1b9de3da-8b43-81e9-a27c-d390394ff8eb" class="">
+</p><p id="1b9de3da-8b43-810d-bc54-fdb9d12a3d55" class="">
+</p><p id="1b9de3da-8b43-81e2-8cad-e2731d7bdf03" class="">
+</p><figure id="1b9de3da-8b43-811f-9f7d-eed4d787dbfc" class="image"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Adobe_After_Effects_CC_icon.svg.png"><img style="width:96.4772720336914px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Adobe_After_Effects_CC_icon.svg.png"/></a></figure><figure id="1b9de3da-8b43-81b5-8705-d7311a8c33b1" class="image"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Adobe_Premiere_Pro_CC_icon.png"><img style="width:189.6171875px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Adobe_Premiere_Pro_CC_icon.png"/></a></figure></div><div id="1b9de3da-8b43-81fe-ac37-dd445dd686de" style="width:12.5%" class="column"><p id="1b9de3da-8b43-8185-9785-d20d9395ee54" class="">
+</p><p id="1b9de3da-8b43-816f-a11b-dd7a5fb379dd" class="">
+</p><p id="1b9de3da-8b43-81de-96d4-df200a3991c3" class="">
+</p><figure id="1b9de3da-8b43-8135-a693-daa2a228cc47" class="image"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Adobe_Photoshop_CC_icon.svg.png"><img style="width:96.4772720336914px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Adobe_Photoshop_CC_icon.svg.png"/></a></figure><figure id="1b9de3da-8b43-8122-8791-d0d7f7cd5e11" class="image"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/canva.png"><img style="width:96.4772720336914px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/canva.png"/></a></figure><figure id="1b9de3da-8b43-80dc-837e-d67f9b1ecff7" class="image"><a href="https://www.notion.so"><img src="https://www.notion.so"/></a></figure></div></div><div id="1b9de3da-8b43-8114-b0a3-cdd37248b69a" class="column-list"><div id="1b9de3da-8b43-8144-ac68-d0eed8fc8907" style="width:49.99999999999999%" class="column"><p id="1b9de3da-8b43-814f-9cb2-c6b899ff55d5" class="">
+</p></div><div id="1b9de3da-8b43-81bd-b556-d09f764b8d27" style="width:49.99999999999999%" class="column"><p id="1b9de3da-8b43-81d0-a2f2-de0c0380423c" class="">
+</p></div></div><div id="1b9de3da-8b43-81ea-a2a2-c084d820e971" class="column-list"><div id="1b9de3da-8b43-8180-b9fb-ebc764e8f964" style="width:112.5%" class="column"><h2 id="1b9de3da-8b43-8179-81e3-e4195d55fde8" class=""><mark class="highlight-brown">Clients I have Worked with</mark></h2></div><div id="1b9de3da-8b43-8131-87db-e91925f223b2" style="width:87.49999999999999%" class="column"><p id="1b9de3da-8b43-81b7-a43c-e6de998ac86b" class="">
+</p></div></div><div id="1b9de3da-8b43-8121-9aa6-edd90092791b" class="column-list"><div id="1b9de3da-8b43-811f-911f-e6c2c2816420" style="width:25.000000000000007%" class="column"><p id="1b9de3da-8b43-8153-95d1-d2f6814d63bb" class="">
+</p><figure id="1b9de3da-8b43-81c9-956a-dffbbf122f13" class="image"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Firefly_generate_a_modern_business_logo_with_graphic_design_space_text_80467.jpg"><img style="width:2048px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/Firefly_generate_a_modern_business_logo_with_graphic_design_space_text_80467.jpg"/></a></figure></div><div id="1b9de3da-8b43-81ce-9c7e-d66abe293e4f" style="width:25%" class="column"><p id="1b9de3da-8b43-810a-9237-faef6a2b692d" class="">
+</p><figure id="1b9de3da-8b43-81a4-8664-e3f94bed908a" class="image"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/78a62986-3f0a-4834-83ef-3b2f320aedb1.png"><img style="width:320px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/78a62986-3f0a-4834-83ef-3b2f320aedb1.png"/></a></figure></div><div id="1b9de3da-8b43-817f-bdc7-c137ad15086c" style="width:25.000000000000007%" class="column"><p id="1b9de3da-8b43-812c-9ebe-ed67bcf10214" class="">
+</p><figure id="1b9de3da-8b43-81eb-bf56-e27de458dd34" class="image"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/98d6b193-ff06-45a1-88f0-bd3800062b57.png"><img style="width:320px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/98d6b193-ff06-45a1-88f0-bd3800062b57.png"/></a></figure></div><div id="1b9de3da-8b43-81d8-badb-e2b7f3944b12" style="width:25.000000000000007%" class="column"><p id="1b9de3da-8b43-8107-a5f6-eb6b4d9c3f79" class="">
+</p><figure id="1b9de3da-8b43-816d-a46f-fb330b29aca0" class="image"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/72ee8b1f-fc84-4493-a7f5-7ee49bf285b9.png"><img style="width:320px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/72ee8b1f-fc84-4493-a7f5-7ee49bf285b9.png"/></a></figure></div></div><p id="1b9de3da-8b43-81e2-b3f1-d2a065c9061b" class="">
+</p><p id="1b9de3da-8b43-8162-9d4d-c4ca5ab72ac3" class="">
+</p><hr id="1b9de3da-8b43-81fc-9422-e48dd34a9165"/><div id="1b9de3da-8b43-8127-89d2-da0d5df7a06a" class="column-list"><div id="1b9de3da-8b43-81a7-8c6d-c0234bc5dcae" style="width:125%" class="column"><p id="1b9de3da-8b43-81b3-a77d-f4c8560b1032" class="">
+</p><h2 id="1b9de3da-8b43-81bc-a089-d2eba102caec" class=""><mark class="highlight-brown">Portfolio Video Editing &amp; Motion Design</mark></h2><h3 id="1b9de3da-8b43-814c-af36-c3e56db8706d" class=""><mark class="highlight-brown">Long Form YouTube Videos</mark></h3></div><div id="1b9de3da-8b43-8126-9e66-cf8293b51eb1" style="width:75.00000000000001%" class="column"><p id="1b9de3da-8b43-81b0-90c3-da05cc341e84" class="">
+</p></div></div><div id="1b9de3da-8b43-8121-b0a1-e7fd0ecfd938" class="column-list"><div id="1b9de3da-8b43-81d5-aa48-f74be571eccf" style="width:93.75%" class="column"><h3 id="1b9de3da-8b43-8147-b93f-cd4e2e2754f0" class="">🎙️<strong>Talking Head Video</strong></h3><p id="1b9de3da-8b43-8173-b6eb-c71f9ad635ac" class="">A brief overview of the project, including your role, challenges faced, and the outcome.</p><p id="1b9de3da-8b43-81c4-9ea5-dca7cdaaef25" class="">
+</p><figure id="1b9de3da-8b43-81c8-919f-e599e95d6110"><div class="source"><a href="https://youtu.be/MmrV6P7HnBo">https://youtu.be/MmrV6P7HnBo</a></div></figure><p id="1b9de3da-8b43-8173-bd1d-ead6ec2d7201" class="">
+</p><h3 id="1b9de3da-8b43-81ab-bf12-d8c961526c8e" class="">⚙️ Podcast</h3><p id="1b9de3da-8b43-81e4-a6a0-d4588f8d67f8" class="">A brief overview of the project, including your role, challenges faced, and the outcome.</p><p id="1b9de3da-8b43-81f5-b835-db29f17429f5" class="">
+</p><figure id="1b9de3da-8b43-814b-a31b-e56d19e6f2d9"><div class="source"><a href="https://www.youtube.com/watch?v=oTahLEX3NXo">https://www.youtube.com/watch?v=oTahLEX3NXo</a></div></figure></div><div id="1b9de3da-8b43-8155-837a-fcf183c96e46" style="width:100%" class="column"><figure id="1b9de3da-8b43-81c6-a714-efa50500702b"><div class="source"><a href="https://youtu.be/ds1Yw4Ft7EU">https://youtu.be/ds1Yw4Ft7EU</a></div></figure><h3 id="1b9de3da-8b43-8170-b7d7-efe1b4e8c79e" class="">🎧 Documentry</h3><figure id="1b9de3da-8b43-80fb-b1bf-c10c1204fc99"><div class="source"><a href="https://www.notion.soundefined"></a></div></figure><p id="1b9de3da-8b43-8198-a297-d92bf4aa344c" class="">A brief overview of the project, including your role, challenges faced, and the outcome.</p><p id="1b9de3da-8b43-81bb-b220-ed1436e14aeb" class="">
+</p><figure id="1b9de3da-8b43-8111-a8af-fbddfcd7c12f"><div class="source"><a href="https://www.youtube.com/watch?v=oTahLEX3NXo">https://www.youtube.com/watch?v=oTahLEX3NXo</a></div></figure><h3 id="1b9de3da-8b43-81b6-ba69-fa9fae7cbdb7" class="">▶️Narrative video</h3><p id="1b9de3da-8b43-8184-a32d-f2f719bd83c7" class="">A brief overview of the project, including your role, challenges faced, and the outcome.</p></div></div><p id="1b9de3da-8b43-81d1-8996-cb044ffb6ba2" class="">
+</p><hr id="1b9de3da-8b43-8117-9306-dda94d326adc"/><div id="1b9de3da-8b43-8188-943a-d8ebda5d3fa4" class="column-list"><div id="1b9de3da-8b43-81f0-8765-ede94ff2b59a" style="width:125%" class="column"><h2 id="1b9de3da-8b43-81f6-98ca-c8c164775d6e" class=""><mark class="highlight-brown">Short Form Content ( Shorts &amp; Reels )</mark></h2></div><div id="1b9de3da-8b43-81a6-93cd-e0c8024ab531" style="width:75%" class="column"><p id="1b9de3da-8b43-81dd-8504-f168b3debd3e" class="">
+</p></div></div><div id="1b9de3da-8b43-8155-9298-e1dfddf3f9d2" class="column-list"><div id="1b9de3da-8b43-8170-af1e-e20a31a6d44b" style="width:50%" class="column"><h3 id="1b9de3da-8b43-8181-81c4-dc839448b6c1" class="">▶️ Personal Branding Video</h3><p id="1b9de3da-8b43-8183-8029-ef1a8a79b0a7" class="">A brief overview of the project, including your role, challenges faced, and the outcome.</p><p id="1b9de3da-8b43-812b-80b1-d33a3386d51b" class="">
+</p><figure id="1b9de3da-8b43-8173-a2df-d5f31a0991ed"><div class="source"><a href="https://www.youtube.com/shorts/K5mL_Hcqm6w">https://www.youtube.com/shorts/K5mL_Hcqm6w</a></div></figure></div><div id="1b9de3da-8b43-819c-b502-f5a94d53115b" style="width:50%" class="column"><figure id="1b9de3da-8b43-816f-b893-e9a8bdea0dcd"><div class="source"><a href="https://www.youtube.com/shorts/K5mL_Hcqm6w">https://www.youtube.com/shorts/K5mL_Hcqm6w</a></div></figure><p id="1b9de3da-8b43-81c5-9cd0-e1ac32ff3734" class="">
+</p><h3 id="1b9de3da-8b43-81c7-bf7c-e4b99b4c2522" class="">▶️ Personal Branding Video  </h3><p id="1b9de3da-8b43-8191-b704-cce58f1d2b74" class="">A brief overview of the project, including your role, challenges faced, and the outcome.</p></div></div><p id="1b9de3da-8b43-818d-a26f-dd7381c78fac" class="">
+</p><p id="1b9de3da-8b43-81ca-8ac4-c08119e86818" class="">
+</p><hr id="1b9de3da-8b43-8103-8394-d16477381a53"/><p id="1b9de3da-8b43-81d5-9b01-ef64ac20c8fe" class="">
+</p><div id="1b9de3da-8b43-8110-b684-c57d42578d17" class="column-list"><div id="1b9de3da-8b43-811d-a61d-ea9288354ac6" style="width:100%" class="column"><h2 id="1b9de3da-8b43-812c-80f2-fccf8b748b99" class=""><mark class="highlight-brown">Practice Projects</mark></h2></div><div id="1b9de3da-8b43-811a-b70a-fa2996827c43" style="width:100%" class="column"><p id="1b9de3da-8b43-81ae-99fc-e4310a0888cd" class="">
+</p></div></div><div id="1b9de3da-8b43-81f7-9a1e-efbe330cdedf" class="column-list"><div id="1b9de3da-8b43-817d-85f7-c55cb8a77d6f" style="width:50%" class="column"><h3 id="1b9de3da-8b43-8160-81c1-deae5f9ff651" class="">▶️ Advance Motion Graphics</h3><p id="1b9de3da-8b43-811f-8aec-f93786dce098" class="">A brief overview of the project, including your role, challenges faced, and the outcome.</p><p id="1b9de3da-8b43-81e0-b911-fd6077d100da" class="">
+</p><figure id="1b9de3da-8b43-81e2-a126-f306b676b403"><div class="source"><a href="https://www.youtube.com/watch?v=ISJHyIVOSGA">https://www.youtube.com/watch?v=ISJHyIVOSGA</a></div></figure></div><div id="1b9de3da-8b43-81ed-9794-fee473dd02c5" style="width:50%" class="column"><figure id="1b9de3da-8b43-8169-ac7e-dd6396576019"><div class="source"><a href="https://www.youtube.com/shorts/K5mL_Hcqm6w">https://www.youtube.com/shorts/K5mL_Hcqm6w</a></div></figure><p id="1b9de3da-8b43-8192-8d6b-e9346a0adf9c" class="">
+</p><h3 id="1b9de3da-8b43-81a1-a354-c52a5e7b9205" class="">▶️ Trending Instagram reels</h3><p id="1b9de3da-8b43-8150-b460-d954af9a0bd4" class="">A brief overview of the project, including your role, challenges faced, and the outcome.</p><p id="1b9de3da-8b43-811c-89da-f1ffc676015b" class="">
+</p></div></div><hr id="1b9de3da-8b43-8185-9735-f7fffb311eda"/><h2 id="1b9de3da-8b43-8145-9d48-c23610ed779f" class=""><mark class="highlight-brown">Services Offered</mark></h2><p id="1b9de3da-8b43-81eb-89bf-dafc2601e51d" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b9de3da-8b43-8181-9a66-ea8fe8204589"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">By choosing my services, you’ll benefit from a dedicated professional who is committed to bringing your vision to life. <br/><br/>Whether it’s a promotional video, a short film, or a documentary, I ensure high-quality results that captivate and engage your audience.<br/></div></figure><p id="1b9de3da-8b43-81bb-8f14-dde7fde69365" class="">
+</p><p id="1b9de3da-8b43-81ed-ba01-e9af19623750" class="">
+</p><div id="1b9de3da-8b43-81c4-97e7-eb62cec72156" class="column-list"><div id="1b9de3da-8b43-813e-a224-e3731ba4fb13" style="width:25%" class="column"><figure id="1b9de3da-8b43-8138-b29f-c93fbc218414" class="image" style="text-align:center"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/c48c00d6-a687-4f9f-a7eb-f082bde45c98.png"><img style="width:320px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/c48c00d6-a687-4f9f-a7eb-f082bde45c98.png"/></a></figure><h3 id="1b9de3da-8b43-8167-a9f8-ec44b4e68baf" class=""><strong>Video Editing</strong></h3></div><div id="1b9de3da-8b43-8161-9ac9-e2541eeb5218" style="width:25%" class="column"><figure id="1b9de3da-8b43-819e-9c93-f0575be84659" class="image" style="text-align:center"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/65a7b085-d1a0-4843-ad9f-f49537fb9ab5.png"><img style="width:320px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/65a7b085-d1a0-4843-ad9f-f49537fb9ab5.png"/></a></figure><h3 id="1b9de3da-8b43-818b-a918-e15fc4e3f459" class=""><strong>Color Grading</strong></h3><p id="1b9de3da-8b43-8102-bd5e-e60e692e8a47" class="">
+</p></div><div id="1b9de3da-8b43-8138-83b3-f3102bfd759f" style="width:24.999999999999996%" class="column"><figure id="1b9de3da-8b43-810b-8d0e-df61f6972303" class="image" style="text-align:center"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/90283098-c3be-4df9-aae0-3952282c1fe1.png"><img style="width:320px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/90283098-c3be-4df9-aae0-3952282c1fe1.png"/></a></figure><h3 id="1b9de3da-8b43-810b-af37-d1b11d03d026" class=""><strong>Motion Graphics</strong></h3></div><div id="1b9de3da-8b43-81ba-87b7-e55485dd8ba3" style="width:25%" class="column"><figure id="1b9de3da-8b43-8152-ab97-d4f4d185bd45" class="image" style="text-align:center"><a href="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/8691590f-22b7-42d2-88ae-0d40d062ae91.png"><img style="width:320px" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/8691590f-22b7-42d2-88ae-0d40d062ae91.png"/></a></figure><h3 id="1b9de3da-8b43-8174-b9d3-c666093cd00b" class=""><strong>Sound Design</strong></h3></div></div><h2 id="1b9de3da-8b43-81d6-910c-c171b1ac4a59" class=""><mark class="highlight-brown">Testimonials</mark></h2><p id="1b9de3da-8b43-8172-865e-ed2c66af8b59" class="">Here are some of the feedback from my clients:</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b9de3da-8b43-81d4-a8ae-d0b8395cc78e"><div style="font-size:1.5em"><span class="icon">👏🏽</span></div><div style="width:100%"><mark class="highlight-default">“Working with [Your Name] was a pleasure. Their attention to detail and creativity exceeded our expectations. The final product was exactly what we needed to capture our audience’s attention.” - [Client Name]</mark></div></figure><p id="1b9de3da-8b43-812f-91ea-cc2c2c093fda" class="">
+</p><figure class="block-color-pink callout" style="white-space:pre-wrap;display:flex" id="1b9de3da-8b43-816d-89fb-e5736b1152b8"><div style="font-size:1.5em"><span class="icon">👏🏽</span></div><div style="width:100%"><mark class="highlight-default">“[Your Name] brought our project to life with their expert editing skills. They were professional, responsive, and a true collaborator throughout the entire process.” - [Client Name]</mark></div></figure><p id="1b9de3da-8b43-81b2-9457-d08b43299e4a" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b9de3da-8b43-81c8-a993-ceff69f3e2d0"><div style="font-size:1.5em"><span class="icon">👏🏽</span></div><div style="width:100%"><mark class="highlight-default">“Working with [Your Name] was a pleasure. Their attention to detail and creativity exceeded our expectations. The final product was exactly what we needed to capture our audience’s attention.” - [Client Name]</mark></div></figure><p id="1b9de3da-8b43-81b6-8917-ce2127c46662" class="">
+</p><p id="1b9de3da-8b43-8116-9a77-c3a8be685f33" class="">
+</p><hr id="1b9de3da-8b43-810a-b5da-cd2dce28ea78"/><h2 id="1b9de3da-8b43-816a-bafa-d72ac3944ff7" class=""><mark class="highlight-brown"><strong>Contact Information:</strong></mark></h2><p id="1b9de3da-8b43-81c8-a650-ceb99a312890" class="">Ready to collaborate on your next project? Get in touch with me!</p><div id="1b9de3da-8b43-8172-bb01-dc1669b81d0a" class="column-list"><div id="1b9de3da-8b43-81d6-8934-f152fe557dc2" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b9de3da-8b43-8133-8c21-e55ce2d09ad6"><div style="font-size:1.5em"><span class="icon">✉️</span></div><div style="width:100%"><a href="mailto:youremail@site.com">Send me an email</a></div></figure></div><div id="1b9de3da-8b43-8160-a290-e30408dc0c08" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b9de3da-8b43-8141-ae31-e6728ec42eac"><div style="font-size:1.5em"><img class="icon" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/pngtree-whatsapp-icon-social-media-png-image_6618452.png"/></div><div style="width:100%"><a href="https://www.whatsapp.com/">9199999999</a></div></figure></div></div><div id="1b9de3da-8b43-815b-954c-e53dd0fa76f6" class="column-list"><div id="1b9de3da-8b43-8135-8a24-c1b47848b048" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b9de3da-8b43-813e-afc6-ed3d16c96aa9"><div style="font-size:1.5em"><img class="icon" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/LinkedIn_icon.svg.png"/></div><div style="width:100%"><a href="https://www.linkedin.com/in/yourusername">Linkedin</a></div></figure></div><div id="1b9de3da-8b43-8158-a611-fc9cdcb969d3" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b9de3da-8b43-815a-8589-f27f9a898563"><div style="font-size:1.5em"><img class="icon" src="Videomaker%20-%20Gefter%20Nata%CC%83%201b9de3da8b438086a36de675dc894539/954290_2227-removebg-preview.png"/></div><div style="width:100%"><a href="https://www.instagram.com/username">Instagram</a></div></figure></div></div><p id="1b9de3da-8b43-811a-8f35-f3f2a6206d1b" class="">
+</p><hr id="1b9de3da-8b43-8153-b1d0-df66cab2af20"/><h2 id="1b9de3da-8b43-813b-b023-c901c8f9043e" class="">Additional Sections</h2><h3 id="1b9de3da-8b43-810a-85dc-d53cf2ef8b9a" class="">Blog/Insights</h3><p id="1b9de3da-8b43-81f4-aefc-c94f77864432" class=""><strong>Latest Posts:</strong></p><ul id="1b9de3da-8b43-817a-9a78-e3413f9d13c8" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/Videomaker-Gefter-Nat-1b9de3da8b438086a36de675dc894539?pvs=21">Behind the Scenes of [Project Name]</a></li></ul><ul id="1b9de3da-8b43-8128-93de-f6cf73d06cd3" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/Videomaker-Gefter-Nat-1b9de3da8b438086a36de675dc894539?pvs=21">Top 5 Tips for Effective Video Editing</a></li></ul><ul id="1b9de3da-8b43-8139-ba22-dbeffcd033e0" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/Videomaker-Gefter-Nat-1b9de3da8b438086a36de675dc894539?pvs=21">The Power of Storytelling in Video</a></li></ul><h3 id="1b9de3da-8b43-81ca-b8cc-dd1ae1a9382f" class="">FAQ</h3><p id="1b9de3da-8b43-8116-9a52-cafe9f76d723" class=""><strong>Frequently Asked Questions:</strong></p><ul id="1b9de3da-8b43-81ae-aa38-d80939101976" class="bulleted-list"><li style="list-style-type:disc"><strong>What is your turnaround time?</strong><br/>Typically, I aim to deliver projects within [X] weeks, depending on the complexity and scope.<br/></li></ul><ul id="1b9de3da-8b43-817b-9f37-c379622c3ae8" class="bulleted-list"><li style="list-style-type:disc"><strong>What are your rates?</strong><br/>My rates vary based on the project. Contact me for a detailed quote.<br/></li></ul><ul id="1b9de3da-8b43-811e-9214-f7234980815f" class="bulleted-list"><li style="list-style-type:disc"><strong>Do you offer revisions?</strong><br/>Yes, I offer [X] rounds of revisions to ensure the final product meets your expectations.<br/></li></ul><h3 id="1b9de3da-8b43-8112-830e-f953a31b438a" class="">Video Reel</h3><p id="1b9de3da-8b43-810a-8115-f2dd7a4f77aa" class="">Check out my highlight reel for a quick overview of my work. <a href="https://www.notion.so/Videomaker-Gefter-Nat-1b9de3da8b438086a36de675dc894539?pvs=21">Watch the Reel</a></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
