@@ -40,15 +40,15 @@
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
+            width: 30%; /* Default width for smaller videos */
             height: 0;
-            flex: 1 1 30%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
             border-radius: 20px;
             overflow: hidden;
         }
 
         .video-container.large {
-            flex: 1 1 45%;
+            width: 45%; /* Larger width for larger videos */
         }
 
         .video-container iframe {
