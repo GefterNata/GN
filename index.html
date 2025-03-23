@@ -38,18 +38,23 @@
             margin-right: auto;
         }
 
-        .gallery .video-container {
+        .video-container {
             position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            flex: 1 1 30%;
             border-radius: 20px;
             overflow: hidden;
-            flex: 1 1 30%;
         }
 
-        .gallery .video-container.large {
+        .video-container.large {
             flex: 1 1 45%;
         }
 
-        .gallery iframe {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             border: 0;
