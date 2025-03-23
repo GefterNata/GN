@@ -40,10 +40,13 @@
 
         .gallery .video-container {
             position: relative;
-            width: 280px;
-            height: 180px;
             border-radius: 20px;
             overflow: hidden;
+            flex: 1 1 30%;
+        }
+
+        .gallery .video-container.large {
+            flex: 1 1 45%;
         }
 
         .gallery iframe {
@@ -52,13 +55,6 @@
             border: 0;
             border-radius: 20px;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .logo {
-            max-width: 70px; /* 30% menor */
-            position: absolute;
-            top: 10px;
-            left: 10px;
         }
 
         .footer {
@@ -71,17 +67,26 @@
 <body>
     <h1>Gefter Nat<span class="alt-font">ã</span></h1>
     <div class="gallery">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/xA4_tkq3f90&ab_channel=AdventistasANC" allowfullscreen></iframe>
+        <div class="video-container large">
+            <iframe src="https://www.youtube.com/embed/link1" allowfullscreen></iframe>
+        </div>
+        <div class="video-container large">
+            <iframe src="https://www.youtube.com/embed/link2" allowfullscreen></iframe>
         </div>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/KkAst3GvwlU&ab_channel=AdventistasANC" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/link3" allowfullscreen></iframe>
         </div>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/paixDxFjQ4k&ab_channel=AdventistasANC" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/link4" allowfullscreen></iframe>
         </div>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/Uj2BSMoXiOs&ab_channel=AdventistasANC" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/link5" allowfullscreen></iframe>
+        </div>
+        <div class="video-container large">
+            <iframe src="https://www.youtube.com/embed/link6" allowfullscreen></iframe>
+        </div>
+        <div class="video-container large">
+            <iframe src="https://www.youtube.com/embed/link7" allowfullscreen></iframe>
         </div>
     </div>
     <div class="footer">Site desenvolvido por Gefter Natã</div>
